@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.InboxActivity">
+
+    <TextView
+        android:id="@+id/inbox_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text=""
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+
+    <Button
+        android:id="@+id/compose_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:text="Compose" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/inbox_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/inbox_drawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/inbox_nav_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:headerLayout="@layout/navigation_header"
+            app:menu="@menu/navigation_menu"
+            android:layout_gravity="start"/>
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>

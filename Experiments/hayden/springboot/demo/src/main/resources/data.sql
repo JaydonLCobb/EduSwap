@@ -1,0 +1,2 @@
+INSERT INTO LOGINS (USERNAME, PASSWORD) VALUES
+    ('user', 'pass');

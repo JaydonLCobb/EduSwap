@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".screen.RegisterActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/eduswap_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/eduswap" />
+
+            <EditText
+                android:id="@+id/UsernameTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/eduswap_logo"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/PasswordTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/UsernameTextField"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="numberPassword" />
+
+            <EditText
+                android:id="@+id/EmailTextField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:layout_below="@id/PasswordTextField" />
+
+            <TextView
+                android:id="@+id/attemptsRemainingText"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/EmailTextField"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textColor="@android:color/holo_red_light"
+                android:text="" />
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/EmailTextField"
+                android:layout_marginTop="16dp"
+                />
+
+            <Button
+                android:id="@+id/RegisterButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/attemptsRemainingText"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:text="Register" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
